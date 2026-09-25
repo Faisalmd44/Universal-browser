@@ -35,6 +35,7 @@ object FreeDroidWarnHelper {
         errorColor: Int,
         onNavigate: (String) -> Unit
     ) {
+        return
         val vCode = runCatching {
             activity.packageManager.getPackageInfo(activity.packageName, 0).longVersionCode.toInt()
         }.getOrDefault(1)
