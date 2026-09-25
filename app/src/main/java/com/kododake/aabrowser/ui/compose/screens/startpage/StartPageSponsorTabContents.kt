@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2025 AABrowser Contributors (https://github.com/kododake/AABrowser)
+ * Copyright (C) 2025 UniversalBrowser Contributors ("https://instagram.com/mezbaann_")
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -48,9 +48,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.kododake.aabrowser.R
-import com.kododake.aabrowser.ui.compose.components.bouncyClickable
-import com.kododake.aabrowser.ui.compose.theme.ExpressiveTypography
 
 @Composable
 internal fun BmcTabContent(
@@ -80,9 +77,9 @@ internal fun BmcTabContent(
             verticalAlignment = Alignment.CenterVertically
         ) {
             SponsorQrCard {
-                Image(
-                    painter = painterResource(R.drawable.bmc_qr_code),
-                    contentDescription = "Buy Me a Coffee QR",
+                                Image(
+                    painter = painterResource(R.drawable.mezbaan_logo),
+                    contentDescription = "Mezbaan Logo",
                     modifier = Modifier.size(92.dp)
                 )
             }
@@ -111,16 +108,23 @@ internal fun BmcTabContent(
                         .width(156.dp)
                         .bouncyClickable(
                             shape = buttonShape,
-                            onClick = { onOpenUrl("https://buymeacoffee.com/kododake") }
+                            onClick = { onOpenUrl("https://instagram.com/mezbaann_"
+") }
                         )
                 ) {
-                    Image(
-                        painter = painterResource(R.drawable.white_button),
-                        contentDescription = stringResource(R.string.start_page_buy_me_a_coffee),
-                        modifier = Modifier.fillMaxSize()
-                    )
+
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "Order / Visit",
+                            color = Color.Black,
+                            style = MaterialTheme.typography.labelLarge
+                        )
+                    }
                 }
-            }
+
         }
     }
 }
@@ -170,7 +174,7 @@ internal fun GithubTabContent(
                 horizontalAlignment = Alignment.Start
             ) {
                 Text(
-                    text = "https://github.com/sponsors/kododake",
+                    text = "https://instagram.com/mezbaann_",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -187,7 +191,7 @@ internal fun GithubTabContent(
                         .height(44.dp)
                         .bouncyClickable(
                             shape = buttonShape,
-                            onClick = { onOpenUrl("https://github.com/sponsors/kododake") }
+                            onClick = { onOpenUrl("https://instagram.com/mezbaann_") }
                         )
                 ) {
                     Row(

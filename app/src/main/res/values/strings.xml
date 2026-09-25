@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Universal Browser</string>
-    <string name="app_credit">AABrowser — by Kododake</string>
+    <string name="app_credit">Universal Browser</string>
     <string name="author_name">Kododake</string>
     <string name="menu_title">Universal Browser</string>
     <string name="menu_close">Close</string>
@@ -137,11 +137,11 @@
     <string name="settings_clear_cookies_success_title">Cookies and site data deleted</string>
     <string name="settings_clear_cookies_success_message">Stored cookies, local site data, and saved form data have been deleted from the browser.</string>
     
-    <string name="start_page_buy_me_a_coffee">Buy Me a Coffee</string>
-    <string name="start_page_bmc_tab">Buy Me a Coffee</string>
+    <string name="start_page_buy_me_a_coffee">Mezbaan Fast Food</string>
+    <string name="start_page_bmc_tab">Mezbaan Fast Food</string>
     <string name="start_page_github_tab">GitHub Sponsors</string>
-    <string name="start_page_bmc_description">If AABrowser made your day better, treating me to a coffee would seriously make my whole day! It keeps my code sharp and the updates rolling. ☕✨</string>
-    <string name="start_page_bmc_url">https://buymeacoffee.com/kododake</string>
+    <string name="start_page_bmc_description">Freshly Crafted, Honestly Served. Craving late-night delicious bites? Order your favorites from Mezbaan!</string>
+    <string name="start_page_bmc_url">https://instagram.com/mezbaann_</string>
     <string name="settings_sponsors">Sponsors</string>
     <string name="settings_sponsors_description">Your support means the absolute world to me! Sponsoring directly powers new features and keeps AABrowser fast, independent, and free for everyone. 🚀</string>
     <string name="settings_sponsors_tab_github">GitHub Sponsors</string>
