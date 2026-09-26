@@ -48,6 +48,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.kododake.aabrowser.R
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.ui.res.painterResource
+
 
 @Composable
 internal fun BmcTabContent(
@@ -77,56 +82,55 @@ internal fun BmcTabContent(
             verticalAlignment = Alignment.CenterVertically
         ) {
             SponsorQrCard {
-                                Image(
-                    painter = painterResource(R.drawable.mezbaan_logo),
-                    contentDescription = "Mezbaan Logo",
-                    modifier = Modifier.size(92.dp)
-                )
-            }
+                                            Image(
+                 painter = painterResource(R.drawable.mezbaan_logo),
+                 contentDescription = "Mezbaan Logo",
+                 modifier = Modifier.size(92.dp)
+             )
+         }
 
-            Spacer(Modifier.width(16.dp))
+         Spacer(Modifier.width(16.dp))
 
-            Column(
-                modifier = if (isLandscape) Modifier else Modifier.weight(1f),
-                horizontalAlignment = Alignment.Start
-            ) {
-                Text(
-                    text = stringResource(R.string.start_page_bmc_url),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+         Column(
+             modifier = if (isLandscape) Modifier else Modifier.weight(1f),
+             horizontalAlignment = Alignment.Start
+         ) {
+             Text(
+                 text = stringResource(R.string.start_page_bmc_url),
+                 style = MaterialTheme.typography.bodySmall,
+                 color = MaterialTheme.colorScheme.onSurfaceVariant
+             )
 
-                Spacer(Modifier.height(10.dp))
+             Spacer(Modifier.height(10.dp))
 
-                Surface(
-                    shape = buttonShape,
-                    shadowElevation = 0.dp,
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.15f)),
-                    color = Color.White,
-                    modifier = Modifier
-                        .height(44.dp)
-                        .width(156.dp)
-                        .bouncyClickable(
-                            shape = buttonShape,
-                            onClick = { onOpenUrl("https://instagram.com/mezbaann_"
-") }
-                        )
-                ) {
+             Surface(
+                 shape = buttonShape,
+                 shadowElevation = 0.dp,
+                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.15f)),
+                 color = Color.White,
+                 modifier = Modifier
+                     .height(44.dp)
+                     .width(156.dp)
+                     .bouncyClickable(
+                         shape = buttonShape,
+                         onClick = { onOpenUrl("https://instagram.com/mezbaann_") }
+                     )
+             ) {
+                 Box(
+                     modifier = Modifier.fillMaxSize(),
+                     contentAlignment = Alignment.Center
+                 ) {
+                     Text(
+                         text = "Order / Visit",
+                         color = Color.Black,
+                         style = MaterialTheme.typography.labelLarge
+                     )
+                 }
+             }
+         }
+     }
+ }
 
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "Order / Visit",
-                            color = Color.Black,
-                            style = MaterialTheme.typography.labelLarge
-                        )
-                    }
-                }
-
-        }
-    }
 }
 
 @Composable
