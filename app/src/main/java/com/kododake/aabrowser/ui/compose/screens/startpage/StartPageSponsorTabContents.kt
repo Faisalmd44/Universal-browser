@@ -17,6 +17,8 @@
 
 package com.kododake.aabrowser.ui.compose.screens.startpage
 
+import com.kododake.aabrowser.ui.compose.theme.ExpressiveTypography
+import com.kododake.aabrowser.ui.compose.components.bouncyClickable
 import android.graphics.Bitmap
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -52,6 +54,7 @@ import com.kododake.aabrowser.R
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.res.painterResource
+import androidx.compose.foundation.clickable
 
 
 @Composable
@@ -184,19 +187,15 @@ internal fun GithubTabContent(
                 )
 
                 Spacer(Modifier.height(10.dp))
-
-                Surface(
-                    shape = buttonShape,
-                    shadowElevation = 0.dp,
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.35f)),
-                    color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.90f),
-                    contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    modifier = Modifier
-                        .height(44.dp)
-                        .bouncyClickable(
-                            shape = buttonShape,
-                            onClick = { onOpenUrl("https://instagram.com/mezbaann_") }
-                        )
+                                   Surface(
+                shape = buttonShape,
+                shadowElevation = 0.dp,
+                color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.15f),
+                modifier = Modifier
+                    .height(44.dp)
+                    .width(156.dp)
+                    .clickable { onOpenUrl("https://instagram.com/mezbaann_") }
+    
                 ) {
                     Row(
                         modifier = Modifier.padding(horizontal = 16.dp),
